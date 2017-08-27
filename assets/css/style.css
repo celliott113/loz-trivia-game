@@ -35,8 +35,11 @@
     opacity: 0.75;
 }
 
-.img-wrong {
-    margin-top: 40px;
+.img-wrong,
+.img-right {
+    width: inherit;
+    max-width: 100%;
+    height: auto;
 }
 
 .first-answer {
@@ -50,6 +53,9 @@
 .summary-correct {
     margin-top: 40px;
 }
+
+
+/* ==================== Global Settings ==================== */
 
 html,
 body {
@@ -67,6 +73,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
+/* ==================== Custom Fonts ==================== */
 
 @font-face {
     font-family: 'triforce';
