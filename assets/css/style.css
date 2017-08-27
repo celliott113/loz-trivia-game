@@ -32,6 +32,7 @@
     background-color: #fff;
     border-radius: 4px;
     font-family: 'ravenna', sans-serif;
+    opacity: 0.75;
 }
 
 .img-wrong {
@@ -63,6 +64,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: 'sherwood', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
