@@ -13,6 +13,7 @@
 
 .timer-p {
     margin-top: 40px;
+    font-family: 'triforce', sans-serif;
 }
 
 .statusBar {
@@ -30,6 +31,7 @@
     padding-left: 14px;
     background-color: #fff;
     border-radius: 4px;
+    font-family: 'ravenna', sans-serif;
 }
 
 .img-wrong {
@@ -55,6 +57,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'sherwood', sans-serif;
 }
 
 @font-face {
@@ -64,11 +67,22 @@ body {
 
 .triforceFont {
     font-family: 'triforce', sans-serif;
-    color: #fff;
 }
 
-.triforceFont2 {
-    font-family: 'triforce', sans-serif;
-    color: #fff;
-    font-size: 400%
+@font-face {
+    font-family: 'ravenna';
+    src: url('ravenna.ttf');
+}
+
+.ravennaFont {
+    font-family: 'ravenna', sans-serif;
+}
+
+@font-face {
+    font-family: 'sherwood';
+    src: url('sherwood.ttf');
+}
+
+.sherwoodFont {
+    font-family: 'sherwood', sans-serif;
 }
