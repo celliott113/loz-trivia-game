@@ -73,7 +73,7 @@ function generateLoss() {
 
 //==================== A function to generateHTML for the countdown timer & multiple choice placement ====================//
 function generateHTML() {
-    gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. " + answerArray[questionCounter][1] + "</p><p class='answer'>C. " + answerArray[questionCounter][2] + "</p><p class='answer'>D. " + answerArray[questionCounter][3] + "</p>";
+    gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>" + answerArray[questionCounter][0] + "</p><p class='answer'>" + answerArray[questionCounter][1] + "</p><p class='answer'>" + answerArray[questionCounter][2] + "</p><p class='answer'>" + answerArray[questionCounter][3] + "</p>";
     $(".mainArea").html(gameHTML);
 }
 
@@ -127,7 +127,23 @@ function resetGame() {
 var startScreen;
 var gameHTML;
 var counter = 30;
-var questionArray = ["Link was raised in what forest under the watchful eye of the Great Deku Tree?", "Who was Link's bestfriend in the forest?", "Ganondorf was born as King of what before gaining a part of the Triforce and conquering Hyrule?", "When Link meets Zelda at Hyrule Castle as kids, Zelda gives Link a quest to find what?", "Which of the three Golden Goddesses is associated with Wisdom?", "Which of these items is NOT required in order to beat the game?", "Where did Link travel to acquire the Spiritual Stone of Fire?", "Impa saves Zelda from the evil Ganondorf. Impa is part of which race?", "To protect him from Ganondorf, the Sages held Link within the Sacred Realm for how many years?", "What item allows Link to dive deeper underwater?", "Do you remember the name of the unique blue Cucco who rarely crows?", "Which of these masks was NOT in Ocarina of Time?", "Which of these characters became the Sage of Spirit?", 'What song is known as "The melody of the Royal Family"?', "How many Gold Skulltula tokens were needed to obtain the Giant's Wallet?"];
+var questionArray = [
+    ["Link was raised in what forest under the watchful eye of the Great Deku Tree?"],
+    ["Who was Link's bestfriend in the forest?"],
+    ["Ganondorf was born as King of what before gaining a part of the Triforce and conquering Hyrule?"],
+    ["When Link meets Zelda at Hyrule Castle as kids, Zelda gives Link a quest to find what?"],
+    ["Which of the three Golden Goddesses is associated with Wisdom?"],
+    ["Which of these items is NOT required in order to beat the game?"],
+    ["Where did Link travel to acquire the Spiritual Stone of Fire?"],
+    ["Impa saves Zelda from the evil Ganondorf. Impa is part of which race?"],
+    ["To protect him from Ganondorf, the Sages held Link within the Sacred Realm for how many years?"],
+    ["What item allows Link to dive deeper underwater?"],
+    ["Do you remember the name of the unique blue Cucco who rarely crows?"],
+    ["Which of these masks was NOT in Ocarina of Time?"],
+    ["Which of these characters became the Sage of Spirit?"],
+    ['What song is known as "The melody of the Royal Family"?'],
+    ["How many Gold Skulltula tokens were needed to obtain the Giant's Wallet?"],
+];
 var answerArray = [
     ["Kakariko", "Kokiri", "Deku", "Forest Temple"],
     ["Mido", "Know-It-All Brothers", "Saria", "The Great Deku Tree"],
@@ -145,8 +161,24 @@ var answerArray = [
     ["Prelude of Light", "Song of Storms", "The Song of Time", "Zelda's Lullaby"],
     ["5", "10", "20", "30"],
 ];
-var imageArray = ["<img class='center-block img-right' src='assets/images/kokiri_forest.gif'>", "<img class='center-block img-right' src='assets/images/saria.gif'>", "<img class='center-block img-right' src='assets/images/ganondorf.gif'>", "<img class='center-block img-right' src='assets/images/spiritual_stones.gif'>", "<img class='center-block img-right' src='assets/images/nayru.gif'>", "<img class='center-block img-right' src='assets/images/biggoron_sword.png'>", "<img class='center-block img-right' src='assets/images/death_mountain.gif'>", "<img class='center-block img-right' src='assets/images/sheikah.gif'>", "<img class='center-block img-right' src='assets/images/sages.gif'>", "<img class='center-block img-right' src='assets/images/zora_scale.gif'>", "<img class='center-block img-right' src='assets/images/cojiro.gif'>", "<img class='center-block img-right' src='assets/images/fierce_deity_mask.gif'>", "<img class='center-block img-right' src='assets/images/nabooru.gif'>", "<img class='center-block img-right' src='assets/images/zelda_lullaby.jpg'>", "<img class='center-block img-right' src='assets/images/gold_skulltula.png'>"];
-var correctAnswers = ["B. Kokiri", "C. Saria", "D. Gerudo", "A. The Spiritual Stones", "B. Nayru", "C. Biggoron Sword", "B. Death Mountain", "A. Sheikah", "C. 7", "A. The Zora Scales", "B. Cojiro", "A. Fierce Deity's Mask", "C. Nabooru", "D. Zelda's Lullaby", "D. 30"];
+var imageArray = [
+    ["<img class='center-block img-right' src='assets/images/kokiri_forest.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/saria.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/ganondorf.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/spiritual_stones.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/nayru.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/biggoron_sword.png'>"],
+    ["<img class='center-block img-right' src='assets/images/death_mountain.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/sheikah.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/sages.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/zora_scale.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/cojiro.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/fierce_deity_mask.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/nabooru.gif'>"],
+    ["<img class='center-block img-right' src='assets/images/zelda_lullaby.jpg'>"],
+    ["<img class='center-block img-right' src='assets/images/gold_skulltula.png'>"],
+];
+var correctAnswers = ["Kokiri","Saria","Gerudo","The Spiritual Stones","Nayru","Biggoron Sword","Death Mountain","Sheikah","7","The Zora Scales","Cojiro","Fierce Deity's Mask","Nabooru","Zelda's Lullaby","30"];
 var questionCounter = 0;
 var selecterAnswer;
 var theClock;
@@ -157,3 +189,5 @@ var clickSound = new Audio("assets/audio/button_click.mp3");
 var noChoice = new Audio("assets/audio/no_choice.mp3");
 var rightChoice = new Audio("assets/audio/right_choice.wav");
 var wrongChoice = new Audio("assets/audio/wrong_choice.wav");
+
+//==================== A function to randomize questions & answer order ====================//
